@@ -1,0 +1,25 @@
+image: node:7.0
+stages:
+  - test
+  - deploy
+
+before_script:
+  - npm install -g yarn
+
+#test:
+#  script:
+#    - yarn
+#    - npm test
+#  stage: test
+#
+#deploy-test:
+#  script: "print 'forge script for test-deploy should get here'"
+#  only:
+#    - develop
+#  stage: deploy
+#
+#deploy-beta:
+#  script: "print 'forge script for beta-deploy should get here'"
+#  only:
+#    - /^release/
+#  stage: deploy

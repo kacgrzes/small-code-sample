@@ -1,0 +1,15 @@
+$IndicatorSize: 50px;
+
+.Online, .Offline {
+  width: $IndicatorSize;
+  height: $IndicatorSize;
+  border-radius: 50%;
+}
+
+.Online {
+  background-color: lightgreen;
+}
+
+.Offline {
+  background-color: lightcoral;
+}

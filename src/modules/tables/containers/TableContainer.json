@@ -1,0 +1,32 @@
+[
+  {
+    "id": "table.title",
+    "description": "Table container title",
+    "defaultMessage": "Table container"
+  },
+  {
+    "id": "table.id",
+    "description": "Table id",
+    "defaultMessage": "Id"
+  },
+  {
+    "id": "table.userName",
+    "description": "User name",
+    "defaultMessage": "User name"
+  },
+  {
+    "id": "table.postTitle",
+    "description": "Post title",
+    "defaultMessage": "Post title"
+  },
+  {
+    "id": "table.views",
+    "description": "Views amount",
+    "defaultMessage": "Views"
+  },
+  {
+    "id": "table.likes",
+    "description": "Likes amount",
+    "defaultMessage": "Likes"
+  }
+]

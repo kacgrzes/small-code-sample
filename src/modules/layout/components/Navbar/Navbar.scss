@@ -1,0 +1,19 @@
+@import '../../containers/Global.scss';
+
+.Navbar {
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  height: $app-header-height;
+  border-bottom: 1px solid $border-color;
+  background: $panel-background-color;
+  user-select: none;
+}
+
+.ActiveLink {
+  color: $brand-primary;
+}
+
+.Logo {
+  height: $app-logo-height;
+}

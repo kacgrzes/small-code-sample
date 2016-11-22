@@ -1,0 +1,16 @@
+linters:
+  SelectorFormat:
+    enabled: true
+    convention: ^[A-Z][a-z]+(?:[A-Z][a-z]+)*$
+  ImportPath:
+    enabled: false
+  PropertySortOrder:
+    enabled: false
+  EmptyRule:
+    enabled: false
+  BorderZero:
+    convention: zero
+  VendorPrefix:
+    excluded_identifiers: ["placeholder", "appearance", "grab"]
+  NestingDepth:
+    max_depth: 4

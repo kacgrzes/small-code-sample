@@ -1,0 +1,59 @@
+@import '../../../../containers/Global.scss';
+
+.SelectedLanguage {
+  color: $brand-primary;
+}
+
+.ButtonPrimary,
+.ButtonTransparent {
+  padding: 0 20px;
+  min-width: 50px;
+  min-height: 25px;
+  height: 100%;
+  border: 0;
+  font-size: 10px;
+  transition: .15s background-color ease;
+}
+
+.ButtonPrimary {
+  background-color: $brand-primary;
+  color: $color-white;
+}
+
+.ButtonPrimary:hover {
+  background-color: darken($brand-primary, 5%);
+}
+
+.ButtonPrimary:active {
+  background-color: darken($brand-primary, 10%);
+}
+
+.ButtonTransparent,
+.ButtonDropdown {
+  background-color: $color-transparent;
+
+  &:hover {
+    background-color: darken($color-white, 5%);
+  }
+
+  &:active {
+    background-color: darken($color-white, 10%);
+  }
+}
+
+.ButtonDropdown {
+  width: 100%;
+  border: 0;
+  background-color: $color-transparent;
+}
+
+.InlineEllipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 130px;
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 auto;
+  line-height: 1.7;
+  vertical-align: middle;
+}

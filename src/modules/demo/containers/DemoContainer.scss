@@ -1,0 +1,8 @@
+// TODO: resolve scss modules so absolute paths can get here
+@import '../../../containers/Global';
+
+.DemoContainer {
+  max-height: calc(100vh - #{$app-header-height});
+  height: 100%;
+  overflow: hidden;
+}

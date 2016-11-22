@@ -1,0 +1,12 @@
+[
+  {
+    "id": "api.title",
+    "description": "Api container title",
+    "defaultMessage": "Api container"
+  },
+  {
+    "id": "api.getusers",
+    "description": "Api get users",
+    "defaultMessage": "Get users"
+  }
+]

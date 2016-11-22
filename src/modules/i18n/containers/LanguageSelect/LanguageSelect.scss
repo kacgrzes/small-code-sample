@@ -1,0 +1,117 @@
+@import '../../../../containers/Global.scss';
+
+.SelectedLanguage {
+  color: $brand-primary;
+}
+
+.ControlsRight {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+
+  .List {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .List li {
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  .List ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    margin-top: -1px;
+    border: 1px solid $border-color;
+  }
+
+  .List li:hover {
+
+    .Icon {
+      color: $brand-primary;
+    }
+
+    .IconProfile::after {
+      background-color: $color-transparent;
+    }
+
+    > ul {
+      display: inherit;
+    }
+  }
+
+  .ListRight ul {
+    right: 0;
+    left: auto;
+  }
+}
+
+.Separator {
+  width: 1px;
+  height: 100%;
+  background-color: $border-color;
+}
+
+.FullHeight {
+  height: 100%;
+}
+
+.ButtonPrimary,
+.ButtonTransparent {
+  padding: 0 20px;
+  min-width: 92px;
+  height: 100%;
+  border: 0;
+  font-size: 10px;
+  transition: .15s background-color ease;
+}
+
+.ButtonPrimary {
+  background-color: $brand-primary;
+  color: $color-white;
+}
+
+.ButtonPrimary:hover {
+  background-color: darken($brand-primary, 5%);
+}
+
+.ButtonPrimary:active {
+  background-color: darken($brand-primary, 10%);
+}
+
+.ButtonTransparent,
+.ButtonDropdown {
+  background-color: $color-transparent;
+
+  &:hover {
+    background-color: darken($color-white, 5%);
+  }
+
+  &:active {
+    background-color: darken($color-white, 10%);
+  }
+}
+
+.ButtonDropdown {
+  width: 100%;
+  border: 0;
+  background-color: $color-transparent;
+}
+
+.InlineEllipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 130px;
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 auto;
+  line-height: 1.7;
+  vertical-align: middle;
+}

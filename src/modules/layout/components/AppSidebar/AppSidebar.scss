@@ -1,0 +1,12 @@
+@import '../../containers/Global.scss';
+
+.AppSidebar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: $app-sidebar-width;
+  height: calc(100vh - #{$app-header-height});
+  border-right: 1px solid $border-color;
+  background-color: $panel-background-color;
+  user-select: none;
+}

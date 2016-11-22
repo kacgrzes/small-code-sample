@@ -1,0 +1,12 @@
+[
+  {
+    "id": "home.title",
+    "description": "Home container title",
+    "defaultMessage": "Home container"
+  },
+  {
+    "id": "home.demo",
+    "description": "Demo component title",
+    "defaultMessage": "Demo component"
+  }
+]

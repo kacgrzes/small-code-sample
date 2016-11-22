@@ -1,0 +1,37 @@
+# Created by https://www.gitignore.io
+
+### OSX ###
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+### Windows ###
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+### JetBrains ###
+.idea/
+
+### Node ###
+# Logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Dependency directory
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
+node_modules
+npm_debug.log
+yarn-error.log
+
+# Webpack #
+build
+stats.json
+
+# Translations #
+*.mo

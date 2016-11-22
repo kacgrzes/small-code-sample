@@ -1,0 +1,34 @@
+#: src/modules/api/containers/ApiContainer.json
+#. [api.title] - Api container title
+msgid "Api container"
+msgstr ""
+
+#: src/modules/demo/containers/DemoContainer.json
+#. [demo.title] - Demo container title
+msgid "Demo Container"
+msgstr ""
+
+#: src/modules/home/containers/HomeContainer.json
+#. [home.demo] - Demo component title
+msgid "Demo component"
+msgstr ""
+
+#: src/modules/api/containers/ApiContainer.json
+#. [api.getusers] - Api get users
+msgid "Get users"
+msgstr ""
+
+#: src/modules/home/components/Demo/Demo.json
+#. [demo.welcome] - Demo welcome message
+msgid "Hello, {name}!"
+msgstr ""
+
+#: src/modules/home/containers/HomeContainer.json
+#. [home.title] - Home container title
+msgid "Home container"
+msgstr ""
+
+#: src/modules/firebase/containers/SignInContainer.json
+#. [firebase.signin] - Sign in with
+msgid "Sign in with"
+msgstr ""

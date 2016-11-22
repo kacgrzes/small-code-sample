@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. [api.title] - Api container title
+#: src/modules/api/containers/ApiContainer.json
+msgid "Api container"
+msgstr "Api container"
+
+#. [demo.title] - Demo container title
+#: src/modules/demo/containers/DemoContainer.json
+msgid "Demo Container"
+msgstr "Demo Container"
+
+#. [home.demo] - Demo component title
+#: src/modules/home/containers/HomeContainer.json
+msgid "Demo component"
+msgstr "Demo component"
+
+#. [api.getusers] - Api get users
+#: src/modules/api/containers/ApiContainer.json
+msgid "Get users"
+msgstr "Get users"
+
+#. [demo.welcome] - Demo welcome message
+#: src/modules/home/components/Demo/Demo.json
+msgid "Hello, {name}!"
+msgstr "Hello, {name}!"
+
+#. [home.title] - Home container title
+#: src/modules/home/containers/HomeContainer.json
+msgid "Home container"
+msgstr "Home container"
+
+#. [firebase.signin] - Sign in with
+#: src/modules/firebase/containers/SignInContainer.json
+msgid "Sign in with"
+msgstr "Sign in with"

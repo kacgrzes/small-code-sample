@@ -1,0 +1,7 @@
+[
+  {
+    "id": "demo.welcome",
+    "description": "Demo welcome message",
+    "defaultMessage": "Hello, {name}!"
+  }
+]

@@ -1,0 +1,96 @@
+@import '../Global.scss';
+
+.Modal {
+}
+
+.Header,
+.TextSmall,
+.TextLarge,
+.Close,
+.ButtonBack {
+  color: $modal-gray;
+  text-align: center;
+}
+
+.Header {
+  font-size: 20px;
+}
+
+.TextSmall {
+  font-size: 10px;
+}
+
+.TextLarge {
+  font-size: 15px;
+}
+
+.TextSubtitle {
+  margin-top: $default-gutter-width;
+}
+
+.Close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  font-size: 25px;
+  height: 36px;
+  line-height: 36px;
+  width: 36px;
+  border: 0;
+}
+
+.ButtonGroup {
+  margin-top: 27px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.Button {
+  padding: 0 20px;
+  min-width: 135px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  background-color: $color-white;
+  border: 1px solid transparent;
+  margin: 0 20px;
+  transition: .15s background-color ease;
+}
+
+.ButtonBack {
+  border-color: $modal-gray;
+}
+
+.ButtonCreate {
+  color: $color-white;
+  background-color: $quickplan-blue;
+
+  &:hover {
+    background-color: darken($quickplan-blue, 5%);
+  }
+
+  &:active,
+  &:focus {
+    background-color: darken($quickplan-blue, 10%);
+  }
+}
+
+.Input {
+  border: 1px solid $border-color;
+  padding: 0 10px;
+  transition: border .2s ease;
+  font-size: 15px;
+  line-height: 30px;
+  color: $text-subtle;
+  width: 100%;
+
+  &:focus,
+  &:hover,
+  &:active {
+    border-color: $quickplan-blue;
+  }
+}

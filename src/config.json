@@ -1,0 +1,57 @@
+{
+  "name": "react-redux-seed",
+  "logo": "assets/favicon.png",
+  "favicon": "assets/favicon.png",
+  "defaultLocale": "pl",
+  "languages": [
+    {
+      "name": "Polski",
+      "locale": "pl",
+      "posix": "pl_PL",
+      "flag": "Poland.png"
+    },
+    {
+      "name": "English",
+      "locale": "en",
+      "posix": "en_GB",
+      "flag": "United-Kingdom.png"
+    },
+    {
+      "name": "Deutsch",
+      "locale": "de",
+      "posix": "de_DE",
+      "flag": "Germany.png"
+    }
+  ],
+  "env": {
+    "production": {
+      "debugEnabled": "__debugEnabled__",
+      "predefinedLogins": [],
+      "apiUrl": "__apiUrl__",
+      "firebase": {
+        "apiKey": "__firebaseApiKey__",
+        "authDomain": "__firebaseAuthDomain__",
+        "databaseURL": "__firebaseDatabaseURL__",
+        "storageBucket": "__firebaseStorageBucket__",
+        "messagingSenderId": "__firebaseMessagingSenderId__"
+      }
+    },
+    "develop": {
+      "debugEnabled": true,
+      "predefinedLogins": [
+        {
+          "email": "demo@desmart.com",
+          "password": "qwe123"
+        }
+      ],
+      "apiUrl": "http://example-api.desmart.com/",
+      "firebase": {
+        "apiKey": "AIzaSyADYmpNjOy5dpP564SD0GnpBCLvAUzyHjA",
+        "authDomain": "seed-demo-ee43c.firebaseapp.com",
+        "databaseURL": "https://seed-demo-ee43c.firebaseio.com",
+        "storageBucket": "seed-demo-ee43c.appspot.com",
+        "messagingSenderId": "116789908805"
+      }
+    }
+  }
+}
