@@ -25,11 +25,7 @@ Place ideas of what could be done here:
 - [ ] inserting a new record
 - [ ] persistence mechanism (localStorage)
 - [x] highlight row of currently authenticated user (hardcoderd active user compared to applicable username)
-<<<<<<< HEAD
-- [ ] extract presentational components from TableContainera 
-=======
-- [ ] extract presentational components from TableContainer 
->>>>>>> 0e466b3c03df472ef599bdd73ffa7a75ac33efe1
+- [ ] extract presentational components from TableContainera
 
 Bonus:
 - [x] translations
