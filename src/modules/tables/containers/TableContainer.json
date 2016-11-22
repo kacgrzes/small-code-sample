@@ -28,5 +28,10 @@
     "id": "table.likes",
     "description": "Likes amount",
     "defaultMessage": "Likes"
+  },
+  {
+    "id": "table.createdAt",
+    "description": "Created at",
+    "defaultMessage": "Created at"
   }
 ]

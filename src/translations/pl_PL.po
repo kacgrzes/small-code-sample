@@ -13,28 +13,20 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
-#. [api.title] - Api container title
-#: src/modules/api/containers/ApiContainer.json
-msgid "Api container"
-msgstr "Kontener Api"
-
-#. [demo.title] - Demo container title
-#: src/modules/demo/containers/DemoContainer.json
-msgid "Demo Container"
-msgstr "Kontener Demo"
+#. [table.createdAt] - Created at
+#: src/modules/tables/containers/TableContainer.json
+msgid "Created at"
+msgstr "Stworzono o"
 
 #. [home.demo] - Demo component title
 #: src/modules/home/containers/HomeContainer.json
 msgid "Demo component"
 msgstr "Komponent Demo"
 
-#. [api.getusers] - Api get users
-#: src/modules/api/containers/ApiContainer.json
-msgid "Get users"
-msgstr "Pobierz użytkowników"
-
+#. [demo.welcome] - Demo welcome message
 #. [demo.welcome] - Demo welcome message
 #: src/modules/home/components/Demo/Demo.json
+#: src/modules/tables/components/Demo/Demo.json
 msgid "Hello, {name}!"
 msgstr "Witaj, {name}!"
 
@@ -43,7 +35,44 @@ msgstr "Witaj, {name}!"
 msgid "Home container"
 msgstr "Kontener Home"
 
-#. [firebase.signin] - Sign in with
-#: src/modules/firebase/containers/SignInContainer.json
-msgid "Sign in with"
-msgstr "Zaloguj się za pomocą"
+#. [table.id] - Table id
+#: src/modules/tables/containers/TableContainer.json
+msgid "Id"
+msgstr "Id"
+
+#. [table.likes] - Likes amount
+#: src/modules/tables/containers/TableContainer.json
+msgid "Likes"
+msgstr "Polubienia"
+
+#. [table.postTitle] - Post title
+#: src/modules/tables/containers/TableContainer.json
+msgid "Post title"
+msgstr "Tytuł posta"
+
+#. [table.title] - Table container title
+#: src/modules/tables/containers/TableContainer.json
+msgid "Table container"
+msgstr "Kontener Table"
+
+#. [table.userName] - User name
+#: src/modules/tables/containers/TableContainer.json
+msgid "User name"
+msgstr "Nazwa użytkownika"
+
+#. [table.views] - Views amount
+#: src/modules/tables/containers/TableContainer.json
+msgid "Views"
+msgstr "Obejrzenia"
+
+#~ msgid "Api container"
+#~ msgstr "Kontener Api"
+
+#~ msgid "Demo Container"
+#~ msgstr "Kontener Demo"
+
+#~ msgid "Get users"
+#~ msgstr "Pobierz użytkowników"
+
+#~ msgid "Sign in with"
+#~ msgstr "Zaloguj się za pomocą"

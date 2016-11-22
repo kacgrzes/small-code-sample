@@ -158,7 +158,13 @@ class TableContainer extends Component {
                 width={200}
               />
               <Column
-                header={<Cell>Created at</Cell>}
+                header={<Cell>
+                  <FormattedMessage
+                    id={'table.createdAt'}
+                    description={'Created at'}
+                    defaultMessage={'Created at'}
+                  />
+                </Cell>}
                 cell={<DateCell data={filteredPosts} col="created_at"/>}
                 width={200}
               />

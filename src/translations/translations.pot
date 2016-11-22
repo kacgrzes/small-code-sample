@@ -1,11 +1,6 @@
-#: src/modules/api/containers/ApiContainer.json
-#. [api.title] - Api container title
-msgid "Api container"
-msgstr ""
-
-#: src/modules/demo/containers/DemoContainer.json
-#. [demo.title] - Demo container title
-msgid "Demo Container"
+#: src/modules/tables/containers/TableContainer.json
+#. [table.createdAt] - Created at
+msgid "Created at"
 msgstr ""
 
 #: src/modules/home/containers/HomeContainer.json
@@ -13,12 +8,9 @@ msgstr ""
 msgid "Demo component"
 msgstr ""
 
-#: src/modules/api/containers/ApiContainer.json
-#. [api.getusers] - Api get users
-msgid "Get users"
-msgstr ""
-
 #: src/modules/home/components/Demo/Demo.json
+#. [demo.welcome] - Demo welcome message
+#: src/modules/tables/components/Demo/Demo.json
 #. [demo.welcome] - Demo welcome message
 msgid "Hello, {name}!"
 msgstr ""
@@ -28,7 +20,32 @@ msgstr ""
 msgid "Home container"
 msgstr ""
 
-#: src/modules/firebase/containers/SignInContainer.json
-#. [firebase.signin] - Sign in with
-msgid "Sign in with"
+#: src/modules/tables/containers/TableContainer.json
+#. [table.id] - Table id
+msgid "Id"
+msgstr ""
+
+#: src/modules/tables/containers/TableContainer.json
+#. [table.likes] - Likes amount
+msgid "Likes"
+msgstr ""
+
+#: src/modules/tables/containers/TableContainer.json
+#. [table.postTitle] - Post title
+msgid "Post title"
+msgstr ""
+
+#: src/modules/tables/containers/TableContainer.json
+#. [table.title] - Table container title
+msgid "Table container"
+msgstr ""
+
+#: src/modules/tables/containers/TableContainer.json
+#. [table.userName] - User name
+msgid "User name"
+msgstr ""
+
+#: src/modules/tables/containers/TableContainer.json
+#. [table.views] - Views amount
+msgid "Views"
 msgstr ""

@@ -15,12 +15,6 @@
       "locale": "en",
       "posix": "en_GB",
       "flag": "United-Kingdom.png"
-    },
-    {
-      "name": "Deutsch",
-      "locale": "de",
-      "posix": "de_DE",
-      "flag": "Germany.png"
     }
   ],
   "env": {

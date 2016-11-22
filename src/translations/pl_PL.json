@@ -1,1 +1,1 @@
-{"api.title":"Kontener Api","api.getusers":"Pobierz użytkowników","demo.title":"Kontener Demo","firebase.signin":"Zaloguj się za pomocą","demo.welcome":"Witaj, {name}!","home.title":"Kontener Home","home.demo":"Komponent Demo"}
+{"demo.welcome":"Witaj, {name}!","home.title":"Kontener Home","home.demo":"Komponent Demo","table.title":"Kontener Table","table.id":"Id","table.userName":"Nazwa użytkownika","table.postTitle":"Tytuł posta","table.views":"Obejrzenia","table.likes":"Polubienia","table.createdAt":"Stworzono o"}
