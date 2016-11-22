@@ -18,14 +18,14 @@ Place ideas of what could be done here:
 - [ ] [sorting](https://gist.github.com/grabbou/30900e58bdb256ec8f3849d7b55414aa) by every column
 - [x] mock data
 - [x] basic styling
-- [ ] 5 rows at once
+- [x] 5 rows at once
 - [ ] pagination
-- [ ] number of rows rendered (5/10/15/20)
+- [x] number of rows rendered (5/10/15/20)
 - [x] filtering based on user name
 - [ ] inserting a new record
 - [ ] persistence mechanism (localStorage)
-- [ ] highlight row of currently authenticated user (hardcoderd active
-user compared to applicable username)
+- [x] highlight row of currently authenticated user (hardcoderd active user compared to applicable username)
+- [ ] extract presentational components from TableContainera 
 
 Bonus:
 - [x] translations
