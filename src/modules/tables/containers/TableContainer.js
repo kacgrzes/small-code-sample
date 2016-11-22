@@ -1,16 +1,22 @@
 import React, {PropTypes, Component} from 'react';
 import {connect} from 'react-redux';
-import {FormattedDate, FormattedMessage, defineMessages} from 'react-intl';
+import {FormattedDate, FormattedMessage} from 'react-intl';
 import {Table, Column, Cell} from 'fixed-data-table';
 
+import config from 'config.json';
 import {fetchData} from 'modules/tables/actions/fetchData/fetchData';
 import Spinner from 'modules/tables/components/Spinner';
 import style from './TableContainer.scss';
 
+const activeUser = config.activeUser;
+
 const DateCell = ({rowIndex, data, col, ...props}) => {
   const date = parseInt(data[rowIndex][col], 10);
   return (
-    <Cell {...props}>
+    <Cell
+      {...props}
+      className={data[rowIndex].user_name === activeUser ? style.HighlightCell : ''}
+    >
       <FormattedDate value={new Date(date)}/>
     </Cell>
   );
@@ -23,7 +29,10 @@ DateCell.propTypes = {
 };
 
 const TextCell = ({rowIndex, data, col, ...props}) => (
-  <Cell {...props}>
+  <Cell
+    {...props}
+    className={data[rowIndex].user_name === activeUser ? style.HighlightCell : ''}
+  >
     {data[rowIndex][col]}
   </Cell>
 );
@@ -40,6 +49,7 @@ class TableContainer extends Component {
     super();
     this.state = {
       filteredPosts: [],
+      rowsAtOnce: 5,
     };
   }
 
@@ -73,9 +83,24 @@ class TableContainer extends Component {
     });
   }
 
+  onRowsAtOnceChange(e) {
+    if (!e.target.value) {
+      this.setState({
+        rowsAtOnce: 5,
+      });
+    }
+
+    const rowsAtOnce = e.target.value;
+
+    this.setState({
+      rowsAtOnce,
+    });
+  }
+
   render() {
     const {posts} = this.props;
     const {filteredPosts} = this.state;
+    const headerHeight = 50;
 
     return (
       <div className={style.TableContainer}>
@@ -94,12 +119,17 @@ class TableContainer extends Component {
               onChange={e => this.onFilterChange(e)}
               placeholder="Filter by First Name"
             />
+            <input
+              type="number"
+              onChange={e => this.onRowsAtOnceChange(e)}
+              placeholder="Rows at once"
+            />
             <Table
               rowHeight={50}
               rowsCount={filteredPosts.length}
-              width={850}
-              height={500}
-              headerHeight={50}
+              width={950}
+              height={this.state.rowsAtOnce * 50 + headerHeight}
+              headerHeight={headerHeight}
               {...this.props}
             >
               <Column
@@ -133,7 +163,7 @@ class TableContainer extends Component {
                   />
                 </Cell>}
                 cell={<TextCell data={filteredPosts} col="post_title"/>}
-                width={100}
+                width={200}
               />
               <Column
                 header={<Cell>

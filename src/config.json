@@ -17,35 +17,5 @@
       "flag": "United-Kingdom.png"
     }
   ],
-  "env": {
-    "production": {
-      "debugEnabled": "__debugEnabled__",
-      "predefinedLogins": [],
-      "apiUrl": "__apiUrl__",
-      "firebase": {
-        "apiKey": "__firebaseApiKey__",
-        "authDomain": "__firebaseAuthDomain__",
-        "databaseURL": "__firebaseDatabaseURL__",
-        "storageBucket": "__firebaseStorageBucket__",
-        "messagingSenderId": "__firebaseMessagingSenderId__"
-      }
-    },
-    "develop": {
-      "debugEnabled": true,
-      "predefinedLogins": [
-        {
-          "email": "demo@desmart.com",
-          "password": "qwe123"
-        }
-      ],
-      "apiUrl": "http://example-api.desmart.com/",
-      "firebase": {
-        "apiKey": "AIzaSyADYmpNjOy5dpP564SD0GnpBCLvAUzyHjA",
-        "authDomain": "seed-demo-ee43c.firebaseapp.com",
-        "databaseURL": "https://seed-demo-ee43c.firebaseio.com",
-        "storageBucket": "seed-demo-ee43c.appspot.com",
-        "messagingSenderId": "116789908805"
-      }
-    }
-  }
+  "activeUser": "ecarroll2"
 }
