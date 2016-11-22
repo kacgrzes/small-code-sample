@@ -15,7 +15,23 @@ Checkout this repo, install dependencies, then start the webpack process with th
 
 ### TODOS ###
 Place ideas of what could be done here:
-- [ ] [Sortowanie](https://gist.github.com/grabbou/30900e58bdb256ec8f3849d7b55414aa)
+- [ ] [sorting](https://gist.github.com/grabbou/30900e58bdb256ec8f3849d7b55414aa) by every column
+- [x] mock data
+- [x] basic styling
+- [ ] 5 rows at once
+- [ ] pagination
+- [ ] number of rows rendered (5/10/15/20)
+- [x] filtering based on user name
+- [ ] inserting a new record
+- [ ] persistence mechanism (localStorage)
+- [ ] highlight row of currently authenticated user (hardcoderd active
+user compared to applicable username)
+
+Bonus:
+- [x] translations
+- [x] locale
+- [x] routing
+- [x] redux devtools
 
 ### LICENCE ###
 ```
