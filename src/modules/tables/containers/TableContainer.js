@@ -10,7 +10,13 @@ import Spinner from 'modules/tables/components/Spinner';
 import DateCell from 'modules/tables/components/DateCell';
 import TextCell from 'modules/tables/components/TextCell';
 import PostForm from 'modules/tables/components/PostForm';
+import SortHeaderCell from 'modules/tables/components/SortHeaderCell';
 import style from './TableContainer.scss';
+
+const SortTypes = {
+  ASC: 'ASC',
+  DESC: 'DESC',
+};
 
 class TableContainer extends Component {
 
@@ -19,6 +25,7 @@ class TableContainer extends Component {
     this.state = {
       filteredPosts: [],
       rowsAtOnce: 5,
+      colSortDirs: {},
     };
   }
 
@@ -29,6 +36,35 @@ class TableContainer extends Component {
   componentWillReceiveProps(nextProps) {
     this.setState({
       filteredPosts: nextProps.posts.data,
+    });
+  }
+
+  @autobind
+  onSortChange(columnKey, sortDir) {
+    const sortedPosts = this.state.filteredPosts
+      .slice()
+      .sort((indexA, indexB) => {
+        const valueA = indexA[columnKey];
+        const valueB = indexB[columnKey];
+        let sortVal = 0;
+        if (valueA > valueB) {
+          sortVal = 1;
+        }
+        if (valueA < valueB) {
+          sortVal = -1;
+        }
+        if (sortVal !== 0 && sortDir === SortTypes.ASC) {
+          sortVal *= -1;
+        }
+
+        return sortVal;
+      });
+
+    this.setState({
+      filteredPosts: sortedPosts,
+      colSortDirs: {
+        [columnKey]: sortDir,
+      },
     });
   }
 
@@ -76,6 +112,7 @@ class TableContainer extends Component {
 
   render() {
     const {posts} = this.props;
+    const {colSortDirs} = this.state;
     const {filteredPosts} = this.state;
     const headerHeight = 50;
 
@@ -112,68 +149,92 @@ class TableContainer extends Component {
               {...this.props}
             >
               <Column
-                header={<Cell>
+                columnKey="id"
+                header={<SortHeaderCell
+                  onSortChange={this.onSortChange}
+                  sortDir={colSortDirs.id}
+                >
                   <FormattedMessage
                     id={'table.id'}
                     description={'Table id'}
                     defaultMessage={'Id'}
                   />
-                </Cell>}
+                </SortHeaderCell>}
                 cell={<TextCell data={filteredPosts} col="id"/>}
                 width={50}
               />
               <Column
-                header={<Cell>
+                columnKey="user_name"
+                header={<SortHeaderCell
+                  onSortChange={this.onSortChange}
+                  sortDir={colSortDirs.user_name}
+                >
                   <FormattedMessage
                     id={'table.userName'}
                     description={'User name'}
                     defaultMessage={'User name'}
                   />
-                </Cell>}
+                </SortHeaderCell>}
                 cell={<TextCell data={filteredPosts} col="user_name"/>}
                 width={100}
               />
               <Column
-                header={<Cell>
+                columnKey="post_title"
+                header={<SortHeaderCell
+                  onSortChange={this.onSortChange}
+                  sortDir={colSortDirs.post_title}
+                >
                   <FormattedMessage
                     id={'table.postTitle'}
                     description={'Post title'}
                     defaultMessage={'Post title'}
                   />
-                </Cell>}
+                </SortHeaderCell>}
                 cell={<TextCell data={filteredPosts} col="post_title"/>}
                 width={200}
               />
               <Column
-                header={<Cell>
+                columnKey="views"
+                header={<SortHeaderCell
+                  onSortChange={this.onSortChange}
+                  sortDir={colSortDirs.views}
+                >
                   <FormattedMessage
                     id={'table.views'}
                     description={'Views amount'}
                     defaultMessage={'Views'}
                   />
-                </Cell>}
+                </SortHeaderCell>}
                 cell={<TextCell data={filteredPosts} col="views"/>}
                 width={200}
               />
               <Column
-                header={<Cell>
+                columnKey="likes"
+                header={<SortHeaderCell
+                  onSortChange={this.onSortChange}
+                  sortDir={colSortDirs.likes}
+                >
                   <FormattedMessage
                     id={'table.likes'}
                     description={'Likes amount'}
                     defaultMessage={'Likes'}
                   />
-                </Cell>}
+                </SortHeaderCell>}
                 cell={<TextCell data={filteredPosts} col="likes"/>}
                 width={200}
               />
               <Column
-                header={<Cell>
+                columnKey="created_at"
+                header={<SortHeaderCell
+                  onSortChange={this.onSortChange}
+                  sortDir={colSortDirs.created_at}
+                >
                   <FormattedMessage
                     id={'table.createdAt'}
                     description={'Created at'}
                     defaultMessage={'Created at'}
                   />
-                </Cell>}
+                </SortHeaderCell>}
                 cell={<DateCell data={filteredPosts} col="created_at"/>}
                 width={200}
               />

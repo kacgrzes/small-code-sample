@@ -15,14 +15,14 @@ Checkout this repo, install dependencies, then start the webpack process with th
 
 ### TODOS ###
 Place ideas of what could be done here:
-- [ ] [sorting](https://gist.github.com/grabbou/30900e58bdb256ec8f3849d7b55414aa) by every column
+- [x] sorting for every column
 - [x] mock data
 - [x] basic styling
 - [x] 5 rows at once
-- [ ] pagination
+- [ ] example with pagination
 - [x] number of rows rendered (5/10/15/20)
 - [x] filtering based on user name
-- [ ] inserting a new record
+- [x] inserting a new record
 - [ ] persistence mechanism (localStorage)
 - [x] highlight row of currently authenticated user (hardcoderd active user compared to applicable username)
 - [x] extract presentational components from TableContainer
