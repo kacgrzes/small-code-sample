@@ -1,8 +1,0 @@
-export const SET_NAME = Symbol('@@home/SET_NAME');
-
-export function setName(name) {
-  return {
-    type: SET_NAME,
-    name,
-  };
-}
