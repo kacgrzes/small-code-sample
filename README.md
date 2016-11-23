@@ -6,7 +6,8 @@
 see `package.json` file
 
 ## Installation
-Checkout this repo, install dependencies, then start the webpack process with the following:
+Checkout this repo, install dependencies, then start the webpack process.
+Do the following:
 
 1. `git clone repo-link repo-folder`
 2. `cd repo-folder`
