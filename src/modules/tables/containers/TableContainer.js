@@ -1,12 +1,15 @@
 import React, {PropTypes, Component} from 'react';
 import {connect} from 'react-redux';
+import {autobind} from 'core-decorators';
 import {FormattedMessage} from 'react-intl';
 import {Table, Column, Cell} from 'fixed-data-table';
 
 import {fetchData} from 'modules/tables/actions/fetchData/fetchData';
+import {createPost} from 'modules/tables/actions/createPost';
 import Spinner from 'modules/tables/components/Spinner';
 import DateCell from 'modules/tables/components/DateCell';
 import TextCell from 'modules/tables/components/TextCell';
+import PostForm from 'modules/tables/components/PostForm';
 import style from './TableContainer.scss';
 
 class TableContainer extends Component {
@@ -29,6 +32,7 @@ class TableContainer extends Component {
     });
   }
 
+  @autobind
   onFilterChange(e) {
     if (!e.target.value) {
       this.setState({
@@ -49,6 +53,7 @@ class TableContainer extends Component {
     });
   }
 
+  @autobind
   onRowsAtOnceChange(e) {
     if (!e.target.value) {
       this.setState({
@@ -61,6 +66,12 @@ class TableContainer extends Component {
     this.setState({
       rowsAtOnce,
     });
+  }
+
+  @autobind
+  onFormSubmit({postTitle}) {
+    // Do something with the form values
+    this.props.createPost(postTitle);
   }
 
   render() {
@@ -82,12 +93,14 @@ class TableContainer extends Component {
           <div>
             <input
               type="text"
-              onChange={e => this.onFilterChange(e)}
+              className="pt-input"
+              onChange={this.onFilterChange}
               placeholder="Filter by First Name"
             />
             <input
               type="number"
-              onChange={e => this.onRowsAtOnceChange(e)}
+              className="pt-input"
+              onChange={this.onRowsAtOnceChange}
               placeholder="Rows at once"
             />
             <Table
@@ -167,6 +180,7 @@ class TableContainer extends Component {
             </Table>
           </div>
         }
+        <PostForm onSubmit={this.onFormSubmit} />
       </div>
     );
   }
@@ -175,6 +189,7 @@ class TableContainer extends Component {
 TableContainer.propTypes = {
   posts: PropTypes.object,
   fetchData: PropTypes.func,
+  createPost: PropTypes.func,
 };
 
 const mapStateToProps = state => ({
@@ -183,6 +198,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = (dispatch) => ({
   fetchData: () => dispatch(fetchData('http://localhost:8080/src/assets/data.json')),
+  createPost: (title) => dispatch(createPost(title)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TableContainer);

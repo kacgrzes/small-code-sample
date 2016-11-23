@@ -1,0 +1,12 @@
+[
+  {
+    "id": "table.postTitle",
+    "description": "Post title",
+    "defaultMessage": "Post title"
+  },
+  {
+    "id": "table.postSubmit",
+    "description": "Submit post",
+    "defaultMessage": "Submit"
+  }
+]

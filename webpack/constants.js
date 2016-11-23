@@ -11,7 +11,7 @@ const constants = Object.freeze({
   ASSETS_DIR: path.join(ABSOLUTE_BASE, 'assets'),
   HOT_RELOAD_PORT: process.env.HOT_RELOAD_PORT || 8080,
   APP_MOUNT_ID: 'app',
-  APP_TITLE: 'React redux seed',
+  APP_TITLE: 'Zadanie-callstack',
 });
 
 module.exports = constants;
