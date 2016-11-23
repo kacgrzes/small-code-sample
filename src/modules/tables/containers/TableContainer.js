@@ -1,47 +1,13 @@
 import React, {PropTypes, Component} from 'react';
 import {connect} from 'react-redux';
-import {FormattedDate, FormattedMessage} from 'react-intl';
+import {FormattedMessage} from 'react-intl';
 import {Table, Column, Cell} from 'fixed-data-table';
 
-import config from 'config.json';
 import {fetchData} from 'modules/tables/actions/fetchData/fetchData';
 import Spinner from 'modules/tables/components/Spinner';
+import DateCell from 'modules/tables/components/DateCell';
+import TextCell from 'modules/tables/components/TextCell';
 import style from './TableContainer.scss';
-
-const activeUser = config.activeUser;
-
-const DateCell = ({rowIndex, data, col, ...props}) => {
-  const date = parseInt(data[rowIndex][col], 10);
-  return (
-    <Cell
-      {...props}
-      className={data[rowIndex].user_name === activeUser ? style.HighlightCell : ''}
-    >
-      <FormattedDate value={new Date(date)}/>
-    </Cell>
-  );
-};
-
-DateCell.propTypes = {
-  rowIndex: PropTypes.number,
-  data: PropTypes.any,
-  col: PropTypes.any,
-};
-
-const TextCell = ({rowIndex, data, col, ...props}) => (
-  <Cell
-    {...props}
-    className={data[rowIndex].user_name === activeUser ? style.HighlightCell : ''}
-  >
-    {data[rowIndex][col]}
-  </Cell>
-);
-
-TextCell.propTypes = {
-  rowIndex: PropTypes.number,
-  data: PropTypes.any,
-  col: PropTypes.any,
-};
 
 class TableContainer extends Component {
 
