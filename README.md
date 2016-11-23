@@ -1,6 +1,4 @@
 # Dynamic tabular datasets using React
-
-> This is a sample solution for titled task.
  
 ## Used technologies
 see `package.json` file
